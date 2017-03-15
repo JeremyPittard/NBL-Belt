@@ -1,0 +1,37 @@
+@mixin page-section($sectionheight) {
+	
+	min-height: $sectionheight;
+	width:100vw;
+	text-align: center;
+	margin: 0;
+	max-width: 100%;
+
+}
+
+@mixin page-footer($footerheight) {
+	
+	min-height: $footerheight;
+	width:100vw;
+	text-align: center;
+	margin:0;
+	max-width: 100%;
+	padding: 0;
+
+}
+
+// Links/////////////////////////////
+@mixin zelda ($link, $visit, $hover, $active) {
+  a {
+    color: $link;
+    text-decoration: none;
+    &:visited {
+      color: $visit;
+    }
+    &:hover {
+      color: $hover;   
+    }
+    &:active {
+      color: $active;
+    }
+  }
+}

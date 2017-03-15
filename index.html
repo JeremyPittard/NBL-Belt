@@ -1,0 +1,120 @@
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="x-ua-compatible" content="ie=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta property="og:url" content="http://www.jpittard.net/nblbelt"/>
+	<meta property="og:type" content="article"/>
+	<meta property="og:title" content="NBL Championship Belt"/>
+	<meta property="og:description" content="keep track of who has the championship belt in the NBL"/>
+	<meta property="og:image" content="http://www.jpittard.net/nblbelt/images/belt.jpeg"/>
+
+	<title>NBL Championship Belt</title>
+	<meta name="description" content="Keeping track of which team has the NBL championship belt">
+	<link rel="stylesheet" href="css/main.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+	
+	</head>
+<body>
+
+	<div class="container"> 
+		<div class="section" id="theTop">
+			<h2>The Nbl Championship Belt currently belongs to...</h2>
+			<br>
+			<img class="teamLogo" id="adelaide" src="images/adelaide.png" alt="beltishere" />
+			<img class="teamLogo" id="brisbane" src="images/bullet.png" alt="beltishere" />
+			<img class="teamLogo" id="cairns" src="images/cairns.png" alt="beltishere" />
+			<img class="teamLogo" id="illawarra" src="images/illawarra.png" alt="beltishere" />
+			<img class="teamLogo" id="melbourne" src="images/MU_Logo.png" alt="beltishere" />
+			<img class="teamLogo currentBelt" id="newzealand" src="images/newzealand.png" alt="beltishere" />
+			<img class="teamLogo " id="perth" src="images/perth.png" alt="beltishere" />
+			<img class="teamLogo" id="sydney" src="images/sydney.png" alt="beltishere" />
+		</div>
+		<div class="footer" id="theFoot">
+		<a href="#theFoot"><p>&#9660 more info  &#9660</p></a>
+
+		<div class="theButtons">
+			<button id="modalBtn">?</button>
+			<a href="http://www.jpittard.net"><img class="footLogo" src="images/frontlogo.png"/></a>
+		</div>
+		<p>not endorsed by or affiliated with the NBL in any way, this site is just for funsies</p>
+		<a href="#theTop"><p>&#9650 head back up &#9650</p></a>
+
+		</div>
+	</div>
+
+	<!-- The Modal -->
+<div id="myModal" class="modal">
+
+  <!-- Modal content -->
+  <div class="modal-content">
+    <span class="close">&times;</span>
+    <p>This site displays who currently holds the NBL championship belt</p>
+    <p>the belt passes from one team to another after a loss, the winner then takes possesion. The belts first champions were the Saints back in 1979.</p>
+    <p>I am currently working on a scraper and app to do this automatically, but for now it is manual</p>
+    <br>
+    <p>This site was created using sass and flexbox by <a href="http://www.jpittard.net">Jeremy Pittard</a>
+  </div>
+
+</div>
+
+<script type="text/javascript">
+
+$(document).ready(function(){
+  // Add smooth scrolling to all links
+  $("a").on('click', function(event) {
+
+    // Make sure this.hash has a value before overriding default behavior
+    if (this.hash !== "") {
+      // Prevent default anchor click behavior
+      event.preventDefault();
+
+      // Store hash
+      var hash = this.hash;
+
+      // Using jQuery's animate() method to add smooth page scroll
+      // The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
+      $('html, body').animate({
+        scrollTop: $(hash).offset().top
+      }, 800, function(){
+   
+        // Add hash (#) to URL when done scrolling (default click behavior)
+        window.location.hash = hash;
+      });
+    } // End if
+  });
+});
+
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+// Get the modal
+var modal = document.getElementById('myModal');
+
+// Get the button that opens the modal
+var btn = document.getElementById("modalBtn");
+
+// Get the <span> element that closes the modal
+var span = document.getElementsByClassName("close")[0];
+
+// When the user clicks on the button, open the modal 
+btn.onclick = function() {
+    modal.style.display = "block";
+}
+
+// When the user clicks on <span> (x), close the modal
+span.onclick = function() {
+    modal.style.display = "none";
+}
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+    if (event.target == modal) {
+        modal.style.display = "none";
+    }
+}
+
+   
+</script>
+
+</body>
+</html>
